@@ -96,7 +96,17 @@ public class MainActivity extends AppCompatActivity implements
     private final Map<String, List<String>> foldersMap = new LinkedHashMap<>();
 
     private boolean isLaunchingApp = false;
-
+ private final ActivityResultLauncher<Intent> bindWidgetLauncher = registerForActivityResult(
+            new ActivityResultContracts.StartActivityForResult(),
+            result -> {
+                if (result.getResultCode() == RESULT_OK && result.getData() != null) {
+                    int appWidgetId = result.getData().getIntExtra(AppWidgetManager.EXTRA_APPWIDGET_ID, -1);
+                    if (appWidgetId != -1) {
+                        attachWidgetView(appWidgetId);
+                    }
+                }
+            }
+    )
     private final ActivityResultLauncher<Intent> pickWidgetLauncher = registerForActivityResult(
             new ActivityResultContracts.StartActivityForResult(),
             result -> {
@@ -119,17 +129,7 @@ public class MainActivity extends AppCompatActivity implements
             }
     );
 
-    private final ActivityResultLauncher<Intent> bindWidgetLauncher = registerForActivityResult(
-            new ActivityResultContracts.StartActivityForResult(),
-            result -> {
-                if (result.getResultCode() == RESULT_OK && result.getData() != null) {
-                    int appWidgetId = result.getData().getIntExtra(AppWidgetManager.EXTRA_APPWIDGET_ID, -1);
-                    if (appWidgetId != -1) {
-                        attachWidgetView(appWidgetId);
-                    }
-                }
-            }
-    );
+   ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
