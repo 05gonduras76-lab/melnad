@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="transparent">#00000000</color>
+    <color name="glass_light_top">#59FFFFFF</color>
+    <color name="glass_light_bottom">#33FFFFFF</color>
+    <color name="glass_dark_top">#591C1C1E</color>
+    <color name="glass_dark_bottom">#38141416</color>
+    <color name="glass_stroke_light">#4DFFFFFF</color>
+    <color name="glass_stroke_dark">#33FFFFFF</color>
+    <color name="text_primary_light">#FFFFFFFF</color>
+    <color name="text_secondary_light">#CCFFFFFF</color>
+    <color name="text_destructive">#FFFF453A</color>
+    <color name="dot_active">#FFFFFFFF</color>
+    <color name="dot_inactive">#59FFFFFF</color>
+</resources>
