@@ -111,7 +111,7 @@ public class LiquidGlassHelper {
                                            int designIndex,
                                            boolean monochrome,
                                            int tintColor) {
-        iconView.setShapeAppearanceOverlay(
+        iconView.setShapeAppearanceModel(
                 com.google.android.material.shape.ShapeAppearanceModel.builder(
                         iconView.getContext(), resolveShapeOverlay(shapeIndex), 0
                 ).build()
