@@ -112,7 +112,7 @@ public class MainActivity extends AppCompatActivity implements
                     }
                 }
             }
-    )
+        );
     private final ActivityResultLauncher<Intent> pickWidgetLauncher = registerForActivityResult(
             new ActivityResultContracts.StartActivityForResult(),
             result -> {
