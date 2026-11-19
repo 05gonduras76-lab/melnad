@@ -106,7 +106,7 @@ public class MainActivity extends AppCompatActivity implements
                     }
                 }
             }
-    )
+        );
     private final ActivityResultLauncher<Intent> pickWidgetLauncher = registerForActivityResult(
             new ActivityResultContracts.StartActivityForResult(),
             result -> {
@@ -128,9 +128,6 @@ public class MainActivity extends AppCompatActivity implements
                 }
             }
     );
-
-   ;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
